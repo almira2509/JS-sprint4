@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Sprint4</title>
+        <link rel="stylesheet" type="text/css" href="style3.css">
+	</head>
+	<body>
+		
+			<div class="verh">
+                <div class="verhleft">
+                    TWITTER
+                </div>
+                <div class="verhright">
+                	<div>Tweets</div>
+                	<div id="screenname"><a href="asd2.html">Login</a></div>
+                	<div><a href="asd.html">Register</a></div>
+                </div>
+			</div>
+
+			<div class="center" id = "center">
+				
+			</div>
+
+			<script>
+				if (localStorage.length >1) {let sname = JSON.parse(localStorage.getItem('result'));
+				document.getElementById('screenname').innerHTML = sname.FIO;
+				document.getElementById('center').innerHTML = '<p><b>' +' Welcome ' + sname.FIO + '</p><br><br>' + 'EMAIL:<br><br>' + sname.email + '<br><br> FULLNAME: <br><br>'+ sname.FIO+ '<br><br> COUNTRY: <br><br>' + sname.country + '<br><br> BDAY:<br><br>'+sname.BD;
+			localStorage.removeItem('result');}
+			</script>
+	</body>
+</html>

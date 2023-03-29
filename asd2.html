@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Sprint4</title>
+        <link rel="stylesheet" type="text/css" href="style2.css">
+	</head>
+	<body>
+		
+			<div class="verh">
+                <div class="verhleft">
+                    TWITTER
+                </div>
+                <div class="verhright">
+                	<div>Tweets</div>
+                	<div>Login</div>
+                	<div><a href="asd.html">Register</a></div>
+                </div>
+			</div>
+
+			<div class="center">
+				<div>EMAIL:</div><br>
+				<div><input id="email" type="text"></div><br>
+				<div>PASSWORD:</div><br>
+				<div><input  id="pass" type="password"></div><br>
+				<div><button onclick = "Login()"><a href="asd3.html">SIGN IN</a></button></div>
+			</div>
+
+			<script>
+			function Login(){
+				let em = email.value;
+				let ps=pass.value;
+				let usersArray = JSON.parse(localStorage.getItem('users'));
+				let result = usersArray.find(item => (item.email == em)&&(item.pass == ps));
+				if (result != null) localStorage.result = JSON.stringify(result);
+			}
+			</script>
+	</body>
+</html>
+

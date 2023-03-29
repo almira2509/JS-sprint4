@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Sprint4</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		
+			<div class="verh">
+                <div class="verhleft">
+                    TWITTER
+                </div>
+                <div class="verhright">
+                	<div>Tweets</div>
+                	<div><a href="asd2.html">Login</a></div>
+                	<div>Register</div>
+                </div>
+			</div>
+
+			<div class="center" id = "form">
+
+				<div>EMAIL:</div><br>
+				<div><input id="email" type="text"></div><br>
+				<div>PASSWORD:</div><br>
+				<div><input  id="pass" type="password"></div><br>
+				<div>FULL NAME:</div><br>
+				<div><input  id="FIO" type="text"></div><br>
+				<div>COUNTRY:</div><br>
+				<div><select  id="country" style="width: 180px">
+                <option value="KZ">Kazakhstan</option>
+                <option value="FR">France</option>
+            	<option value="USA">USA</option></select></div><br>
+                <div>BIRTHDATE:</div><br>
+				<div><input id="BD" type="date" style="width: 175px"></div><br>
+				<div><button onclick="Save()" id="button">REGISTER</button></div>
+			</div>
+
+
+			<script>
+				let usersArray = [];
+				function clearAllFormInputs() {
+  					let form = document.getElementById('form');
+ 					let inputs = form.getElementsByTagName('input');
+  					for (let input of inputs)
+   					input.value = '';
+				}
+				function Save(){
+					let newPerson = {};
+					let name=FIO.value;
+					newPerson.email=email.value;
+					newPerson.pass=pass.value;
+					newPerson.FIO=name;
+					newPerson.country=country.value;
+					newPerson.BD=BD.value;
+
+					let usersArray = JSON.parse(localStorage.getItem('users'));
+					usersArray.push(newPerson);
+
+					localStorage.users = JSON.stringify(usersArray);
+					let button = document.getElementById('button');
+					button.addEventListener('click', clearAllFormInputs);
+				}
+
+			</script>
+	</body>
+</html>

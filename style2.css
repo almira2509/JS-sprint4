@@ -1,0 +1,40 @@
+Body {
+    margin: 0px;
+}
+
+.verh{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #328C8A;
+    color: white;
+    }
+
+.verhleft{
+    font-size: 200%;
+    padding: 20px;
+    }
+.verhright {
+    display: flex;
+    justify-content: space-between;
+}
+.verhright div{
+    padding: 5px;
+}
+.verhright a{
+    color: white;
+}
+.center {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 6em;
+}
+.center button {
+    background-color: #051CB1;
+    color: white;
+    padding: 10px 20px;
+}
+.center a{
+    color: white;
+}
